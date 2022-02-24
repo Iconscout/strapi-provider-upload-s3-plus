@@ -1,0 +1,21 @@
+{
+  "name": "strapi-provider-upload-s3-plus",
+  "version": "1.0.0",
+  "description": "Strapi Provider for Upload to S3 (customized)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zaid Kureshi",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.758.0"
+  },
+  "strapi": {
+    "isProvider": true
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  }
+}
