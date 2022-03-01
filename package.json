@@ -1,13 +1,18 @@
 {
   "name": "strapi-provider-upload-s3-plus",
   "version": "1.0.0",
-  "description": "Strapi Provider for Upload to S3 (customized)",
+  "description": "Customised Strapi upload provider for S3 having support of prefix in path and CDN url while retrieval.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Zaid Kureshi",
-  "license": "ISC",
+  "homepage": "https://github.com/Iconscout/strapi-provider-upload-s3-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Iconscout/strapi-provider-upload-s3-plus.git"
+  },
+  "author": "Iconscout",
+  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.758.0"
   },

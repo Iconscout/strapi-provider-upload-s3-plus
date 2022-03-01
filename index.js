@@ -16,7 +16,7 @@ module.exports = {
           const path = file.path ? `${file.path}/` : ""; // Coming from file obj from admin client
 
           let params = {
-            Key: `${path}${prefix}${file.hash}${file.ext}`,
+            Key: `${prefix}${path}${file.hash}${file.ext}`,
             Body: Buffer.from(file.buffer, "binary"),
             ContentType: file.mime,
             ACL: "public-read",
@@ -29,7 +29,7 @@ module.exports = {
             }
 
             file.url = config.cdnUrl
-              ? `${config.cdnUrl}/${data.Key.replace(prefix, "")}`
+              ? `${config.cdnUrl}/${data.Key}`
               : data.Location;
 
             resolve();
@@ -42,7 +42,7 @@ module.exports = {
           const path = file.path ? `${file.path}/` : "";
           S3.deleteObject(
             {
-              Key: `${path}${prefix}${file.hash}${file.ext}`,
+              Key: `${prefix}${path}${file.hash}${file.ext}`,
               ...customParams,
             },
             (err, data) => {
